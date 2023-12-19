@@ -4,14 +4,15 @@
  * Return: 0 on success.
  */
 int main(void)
-{
-	char c[] = "_putchar";
+	{
+	char school[10] = "_putchar";
+
 	int i;
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 8; i++)
 	{
-		_putchar(c[i]);
+		_putchar(school[i]);
 	}
-	_putchar('\n');
+	_putchar(10);
 	return (0);
 }
