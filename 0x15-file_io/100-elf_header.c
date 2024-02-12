@@ -217,10 +217,10 @@ void elf_type(const unsigned char *buffer, int big_endian)
 }
 
 /**
- * elf_entry - print entry point address
- * @buffer: string containing the entry point address
- * @bit_mode: bit mode (32 or 64)
- * @big_endian: endianness (big endian if non-zero)
+ * elf_entry - entry point address
+ * @buffer:  entry point address
+ * @bit_mode: bit mode
+ * @big_endian: endianness
  */
 void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 {
