@@ -6,8 +6,8 @@
 
 /**
  * _strncmp - compare two strings
- * @s1: the first string
- * @s2: the second string
+ * @s1: first string
+ * @s2: second string
  * @n: the max number of bytes to compare
  *
  * Return: 0 if the first n bytes of s1 and s2 are equal, otherwise non-zero
@@ -30,7 +30,7 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /**
- * _close - close a file descriptor and print an error message upon failure
+ * _close - close a file descriptor
  * @fd: the file descriptor to close
  */
 void _close(int fd)
@@ -42,10 +42,10 @@ void _close(int fd)
 }
 
 /**
- * _read - read from a file and print an error message upon failure
- * @fd: the file descriptor to read from
- * @buf: the buffer to write to
- * @count: the number of bytes to read
+ * _read - read from a file
+ * @fd: file descriptor
+ * @buf: buffer to write to
+ * @count: bytes to read
  */
 void _read(int fd, char *buf, size_t count)
 {
@@ -58,7 +58,7 @@ void _read(int fd, char *buf, size_t count)
 
 /**
  * elf_magic - print ELF magic
- * @buffer: the ELF header
+ * @buffer: ELF header
  */
 void elf_magic(const unsigned char *buffer)
 {
@@ -78,9 +78,9 @@ void elf_magic(const unsigned char *buffer)
 
 /**
  * elf_class - print ELF class
- * @buffer: the ELF header
+ * @buffer: ELF header
  *
- * Return: bit mode (32 or 64)
+ * Return: bit mode
  */
 size_t elf_class(const unsigned char *buffer)
 {
@@ -102,7 +102,7 @@ size_t elf_class(const unsigned char *buffer)
 
 /**
  * elf_data - print ELF data
- * @buffer: the ELF header
+ * @buffer: ELF header
  *
  * Return: 1 if big endian, otherwise 0
  */
@@ -126,7 +126,7 @@ int elf_data(const unsigned char *buffer)
 
 /**
  * elf_version - print ELF version
- * @buffer: the ELF header
+ * @buffer: ELF header
  */
 void elf_version(const unsigned char *buffer)
 {
@@ -140,7 +140,7 @@ void elf_version(const unsigned char *buffer)
 
 /**
  * elf_osabi - print ELF OS/ABI
- * @buffer: the ELF header
+ * @buffer: ELF header
  */
 void elf_osabi(const unsigned char *buffer)
 {
@@ -176,7 +176,7 @@ void elf_osabi(const unsigned char *buffer)
 
 /**
  * elf_abivers - print ELF ABI version
- * @buffer: the ELF header
+ * @buffer: ELF header
  */
 void elf_abivers(const unsigned char *buffer)
 {
@@ -185,8 +185,8 @@ void elf_abivers(const unsigned char *buffer)
 
 /**
  * elf_type - print ELF type
- * @buffer: the ELF header
- * @big_endian: endianness (big endian if non-zero)
+ * @buffer: ELF header
+ * @big_endian: endianness
  */
 void elf_type(const unsigned char *buffer, int big_endian)
 {
