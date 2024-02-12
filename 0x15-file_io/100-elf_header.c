@@ -255,9 +255,9 @@ void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 }
 
 /**
- * main - copy a file's contents to another file
- * @argc: the argument count
- * @argv: the argument values
+ * main - copy a file's contents
+ * @argc: count
+ * @argv: values
  *
  * Return: Always 0
  */
