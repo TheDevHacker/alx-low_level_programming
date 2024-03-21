@@ -10,30 +10,20 @@
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new_node;
+	dlistint_t *new_mem;
 
-	/* allocates the memory for new node */
-	new_node = malloc(sizeof(dlistint_t));
+	new_mem = malloc(sizeof(dlistint_t));
 
-	/* return NULL if fails */
-	if (new_node == NULL)
+	if (new_mem == NULL)
 		return (NULL);
 
-	/* assigns data to new node */
-	new_node->n = n;
+	new_mem->n = n;
+	new_mem->prev = NULL;
+	new_mem->next = *head;
 
-	/* points the next of newNode to the first node of the doubly linked list */
-	new_node->next = *head;
+	if (*head != NULL)
+		(*head)->prev = new_mem;
+	*head = new_mem;
 
-	/* points the previous of new node to NULL */
-	new_node->prev = NULL;
-
-	/* points the previous of 1st node (now 1st node is the second node) to new node */
-	if ((*head) != NULL)
-		(*head)->prev = new_node;
-
-	/* head points to newNode */
-	(*head) = new_node;
-
-	return (new_node);
+	return (new_mem);
 }
